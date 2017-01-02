@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/getlantern/systray"
-	"github.com/getlantern/systray/example/icon"
+	"github.com/scryner/systray"
+	"github.com/scryner/systray/example/icon"
 	"github.com/skratchdot/open-golang/open"
 )
 
@@ -29,6 +29,7 @@ func onReady() {
 		systray.SetTitle("Awesome App")
 		systray.SetTooltip("Pretty awesome棒棒嗒")
 		mChange := systray.AddMenuItem("Change Me", "Change Me")
+		systray.AddMenuSeparatorItem()
 		mChecked := systray.AddMenuItem("Unchecked", "Check Me")
 		mEnabled := systray.AddMenuItem("Enabled", "Enabled")
 		systray.AddMenuItem("Ignored", "Ignored")
